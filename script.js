@@ -13,7 +13,7 @@ toggle.addEventListener("click" , function(){
    }
 });
 
-  
+
 // type text in express-skill
 const textToChange = document.querySelector(".text_to_change");
 const cursor = document.querySelector(".cursor");
