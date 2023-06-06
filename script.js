@@ -1,26 +1,20 @@
-console.log('Script connected.');
+// console.log('Script connected.');
 // toggle navbar during mobile view
-const hamburger = document.querySelector(".hamburger");
+const toggle = document.querySelector(".toggle");
 const navbar = document.querySelector(".navlist");
-
-hamburger.addEventListener("click", ()=>{
-    navbar.classList.toggle("slide");
+toggle.addEventListener("click" , function(){
+   const visibility = navbar.getAttribute("data-visible");
+   if(visibility === "false"){
+    navbar.setAttribute("data-visible", true);
+    toggle.setAttribute("aria-expanded", true);
+   }else{
+    navbar.setAttribute("data-visible", false);
+    toggle.setAttribute("aria-expanded", false);
+   }
 });
 
-// introduction text typing animation
-// const intro_text = document.querySelector(".intro");
-// const text = "Hello, I'm Subashkumar.";
-// let index = 0;
   
-// const intervalId = setInterval(function(){
-//     intro_text.innerHTML += text[index];
-//     index++;
-//     if(index === text.length){
-//         clearInterval(intervalId);
-//     }
-// }, 300);
-  
-// // type text in express-skill
+// type text in express-skill
 const textToChange = document.querySelector(".text_to_change");
 const cursor = document.querySelector(".cursor");
 
@@ -68,5 +62,20 @@ document.addEventListener("DOMContentLoaded", function(){
     setTimeout(type, newTextDelay + 250);
 });
 
+
+// Download resume
+const downloadButton = document.querySelector('.resume');
+
+downloadButton.addEventListener('click', () => {
+  const pdfUrl = 'Subashkumar_S_Resume.pdf'; // Replace with the actual URL of your PDF file
+
+  // Create a link element
+  const link = document.createElement('a');
+  link.href = pdfUrl;
+  link.download = 'Subashkumar_S_Resume.pdf'; // Specify the desired filename for the downloaded file
+
+  // Trigger a click event on the link
+  link.click();
+});
 
 
