@@ -6,11 +6,12 @@
     list-style: none;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body {
   background: #252525;
   color: #ebe4e4;
-  overflow-x: hidden;
+  
 }
 /* nav starts */
 .introduction_container{
@@ -133,7 +134,7 @@ nav{
     }
   100%{
      background-color: rgb(255, 255, 255);
-    }
+    }npm install -g firebase-tools
 }
 
 .greeting{
