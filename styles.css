@@ -545,6 +545,9 @@ footer{
     border: none;
     color: black;
   } 
+  .navbar ul li a:hover{
+    background-color: none;
+  }
   .navlist[data-visible="true"]{
     transform: translateX(0%);
   }
